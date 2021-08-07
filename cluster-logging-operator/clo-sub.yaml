@@ -1,0 +1,15 @@
+apiVersion: v1
+items:
+- apiVersion: operators.coreos.com/v1alpha1
+  kind: Subscription
+  metadata:
+    name: cluster-logging
+    namespace: openshift-logging
+  spec:
+    channel: "4.5"
+    installPlanApproval: Manual
+    name: cluster-logging
+    source: redhat-operators
+    sourceNamespace: openshift-marketplace
+    startingCSV: clusterlogging.4.5.0-202106211140
+---
